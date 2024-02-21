@@ -1,0 +1,55 @@
+.partners {
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: max-content;
+    column-gap: 30px;
+
+    @include tablet-small {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #C4C4C4;
+    height: 135px;
+    width: 255px;
+
+
+    @include tablet-big {
+      width: 150px;
+      height: 80px;
+    }
+
+    @include tablet-small {
+      width: 240px;
+      height: 127px;
+    }
+  }
+
+  &__image {
+
+    @include tablet-big {
+      width: 115px;
+    }
+    @include tablet-small {
+      width: 185px;
+    }
+  }
+}
